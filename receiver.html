@@ -15,12 +15,14 @@
       margin: 0;
       background: black url("loading.png") no-repeat 10% 10%;
       background-size: 28%;
+      background-position: center;
 	  }
 
     #main{
       height: 100%;
       background: black url("bg1.png") no-repeat 10% 10%;
       background-size: 28%;
+      background-position: center;
       opacity: 0;
       transition: opacity 4s ease;
     }
@@ -28,6 +30,7 @@
     #main, iframe{
       background: black url("bg1.png") no-repeat 10% 10%;
       background-size: 28%;
+      background-position: center;
     }
 
     #main.show{
@@ -148,6 +151,7 @@
         };
         
         // create a CastMessageBus to handle messages for a custom namespace
+        //window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:es.offd.dashcast');
         window.messageBus = window.castReceiverManager.getCastMessageBus('urn:x-cast:com.comminter.dashcast');
 
         // handler for the CastMessageBus message event
