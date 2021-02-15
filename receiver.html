@@ -130,6 +130,10 @@
         }
 
         function loadFrame(url, reload_time) {
+        var count = url.split('?').length - 1;
+          if ( count > 1 ){
+            url=url.replace('?mac=', '&mac=')
+          }
           setStatus("Loading: " + url);
           window.reload_time = reload_time;
           candidate.src="error.html?dashcast_is_error_page_zz";
@@ -139,6 +143,10 @@
         }
 
         function loadPage(url) {
+        var count = url.split('?').length - 1;
+          if ( count > 1 ){
+            url=url.replace('?mac=', '&mac=')
+          }
           setStatus("Force loading: " + url);
           window.setTimeout(function() { window.location = url; }, 1000);
         }
